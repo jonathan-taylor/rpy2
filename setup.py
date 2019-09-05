@@ -163,7 +163,7 @@ if __name__ == '__main__':
         cffi_modules=['rpy2/_rinterface_cffi_build.py:ffibuilder'],
         package_dir=pack_dir,
         packages=([pack_name] +
-                  [f'{pack_name}.{x}' for x in ('rlike', 'rinterface_lib', 'robjects',
+                  ['%s.%s' % (pack_name, x) for x in ('rlike', 'rinterface_lib', 'robjects',
                                                 'robjects.lib', 'interactive', 'ipython',
                                                 'tests',
                                                 'tests.rinterface', 'tests.rlike',
